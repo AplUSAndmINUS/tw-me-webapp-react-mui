@@ -1,6 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 import { green, red, yellow } from '@mui/material/colors';
 
+// toggle for light/dark mode: https://mui.com/material-ui/customization/dark-mode/
+// create palettes for each type, then objects for each of the elements themselves
 export const theme = createTheme({
   palette: {
     primary: {
@@ -13,7 +15,7 @@ export const theme = createTheme({
       light: '#ff7961',
       main: '#00b0ff',
       dark: '#ba000d',
-      contrastText: '#000'
+      contrastText: '#ddd'
     },
     success: {
       light: green[500],
@@ -56,7 +58,7 @@ export const theme = createTheme({
       fontFamily: [
         '-apple-system',
         'BlinkMacSystemFont',
-        'Roboto',
+        'roboto',
         '"Helvetica Neue"',
         'Arial',
         'sans-serif',
@@ -71,7 +73,7 @@ export const theme = createTheme({
         ].join(','),
         fontSize: '4rem',
         '@media (max-width:600px)': {
-          fontSize: '2.5rem'
+          fontSize: '2.75rem'
         },
         fontWeight: 800,
         letterSpacing: '1px',
@@ -79,7 +81,7 @@ export const theme = createTheme({
       },
       h2: {
         fontFamily: [
-          'Roboto',
+          'roboto',
           '"Helvetica Neue Light"',
           '"Arial Light"',
           'sans-serif'
@@ -93,6 +95,8 @@ export const theme = createTheme({
       },
       h3: {
         fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
           'roboto',
           'Helvetica',
           'Helvetica Neue',
@@ -108,6 +112,8 @@ export const theme = createTheme({
       },
       h4: {
         fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
           'roboto',
           '"Helvetica Neue"',
           'Arial',
@@ -118,6 +124,8 @@ export const theme = createTheme({
       },
       h5: {
         fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
           'roboto',
           '"Helvetica Neue"',
           'Arial',
@@ -180,7 +188,7 @@ export const theme = createTheme({
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
         ].join(','),
-        fontSize: '0.75',
+        fontSize: '0.75rem',
         fontWeight: 'normal'
       },
       caption: {
@@ -195,7 +203,7 @@ export const theme = createTheme({
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
         ].join(','),
-        fontSize: '0.5',
+        fontSize: '0.5rem',
         fontWeight: 'normal'
       },
     }
