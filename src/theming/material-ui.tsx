@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/system';
+import { createTheme } from '@mui/material/styles';
 import { green, red, yellow } from '@mui/material/colors';
 
 export const theme = createTheme({
@@ -15,43 +15,30 @@ export const theme = createTheme({
       dark: '#ba000d',
       contrastText: '#000'
     },
-    status: {
-      primary: {
-        light: '#3d6bb3',
-        main: '#0d47a1',
-        dark: '#093170',
-        contrastText: '#fff' 
-      },
-      success: {
-        light: green[500],
-        main: green[700],
-        dark: green[800],
-        contrastText: '#fff'
-      },
-      danger: {
-        light: red[500],
-        main: red[700],
-        dark: red[800],
-        contrastText: '#fff'
-      },
-      error: {
-        light: red[500],
-        main: red[700],
-        dark: red[800],
-        contrastText: '#fff'
-      },
-      warning: {
-        light: yellow[500],
-        main: yellow[700],
-        dark: yellow[800],
-        contrastText: '#fff'
-      },
-      info: {
-        light: '#3d6bb3',
-        main: '#0d47a1',
-        dark: '#093170',
-        contrastText: '#fff' 
-      }
+    success: {
+      light: green[500],
+      main: green[700],
+      dark: green[800],
+      contrastText: '#fff'
+    },
+    error: {
+      light: red[500],
+      main: red[700],
+      dark: red[800],
+      contrastText: '#fff'
+    },
+    warning: {
+      light: yellow[500],
+      main: yellow[700],
+      dark: yellow[800],
+      contrastText: '#fff'
+    },
+    info: {
+      light: '#3d6bb3',
+      main: '#0d47a1',
+      dark: '#093170',
+      contrastText: '#fff' 
+    }
     },
     transitions: {
       easing: {
@@ -79,23 +66,24 @@ export const theme = createTheme({
       ].join(','),
       h1: {
         fontFamily: [
-          '"Proxima Nova Extrabold"',
+          'proxima-nova',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '4rem',
         '@media (max-width:600px)': {
           fontSize: '2.5rem'
         },
         fontWeight: 800,
-        letterSpacing: '1px'
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
       },
       h2: {
         fontFamily: [
-          '"Roboto Light"',
+          'Roboto',
           '"Helvetica Neue Light"',
           '"Arial Light"',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '3rem',
         '@media (max-width:600px)': {
           fontSize: '2rem'
@@ -105,11 +93,12 @@ export const theme = createTheme({
       },
       h3: {
         fontFamily: [
-          'Roboto',
-          '"Helvetica Neue"',
+          'roboto',
+          'Helvetica',
+          'Helvetica Neue',
           'Arial',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '1.5rem',
         '@media (max-width:600px)': {
           fontSize: '1.25rem'
@@ -119,27 +108,27 @@ export const theme = createTheme({
       },
       h4: {
         fontFamily: [
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '1rem',
         fontWeight: 'normal',
       },
       h5: {
         fontFamily: [
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '0.75rem',
         fontWeight: 600
       },
       h6: {
         fontFamily: [
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
@@ -153,7 +142,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -168,7 +157,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -183,7 +172,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -198,7 +187,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -211,4 +200,4 @@ export const theme = createTheme({
       },
     }
   },
-});
+);
