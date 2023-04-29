@@ -81,7 +81,7 @@ export const theme = createTheme({
         fontFamily: [
           '"Proxima Nova Extrabold"',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '4rem',
         '@media (max-width:600px)': {
           fontSize: '2.5rem'
@@ -95,7 +95,7 @@ export const theme = createTheme({
           '"Helvetica Neue Light"',
           '"Arial Light"',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '3rem',
         '@media (max-width:600px)': {
           fontSize: '2rem'
@@ -109,7 +109,7 @@ export const theme = createTheme({
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '1.5rem',
         '@media (max-width:600px)': {
           fontSize: '1.25rem'
@@ -123,7 +123,7 @@ export const theme = createTheme({
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '1rem',
         fontWeight: 'normal',
       },
@@ -133,7 +133,7 @@ export const theme = createTheme({
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
-        ],
+        ].join(','),
         fontSize: '0.75rem',
         fontWeight: 600
       },
@@ -191,7 +191,7 @@ export const theme = createTheme({
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
         ].join(','),
-        fontSize: '0.75',
+        fontSize: '0.75rem',
         fontWeight: 'normal'
       },
       caption: {
@@ -206,7 +206,7 @@ export const theme = createTheme({
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
         ].join(','),
-        fontSize: '0.5',
+        fontSize: '0.5rem',
         fontWeight: 'normal'
       },
     }
