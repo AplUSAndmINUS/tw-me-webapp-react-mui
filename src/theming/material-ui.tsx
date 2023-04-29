@@ -1,6 +1,8 @@
-import { createTheme } from '@mui/system';
+import { createTheme } from '@mui/material/styles';
 import { green, red, yellow } from '@mui/material/colors';
 
+// toggle for light/dark mode: https://mui.com/material-ui/customization/dark-mode/
+// create palettes for each type, then objects for each of the elements themselves
 export const theme = createTheme({
   palette: {
     primary: {
@@ -13,45 +15,32 @@ export const theme = createTheme({
       light: '#ff7961',
       main: '#00b0ff',
       dark: '#ba000d',
-      contrastText: '#000'
+      contrastText: '#ddd'
     },
-    status: {
-      primary: {
-        light: '#3d6bb3',
-        main: '#0d47a1',
-        dark: '#093170',
-        contrastText: '#fff' 
-      },
-      success: {
-        light: green[500],
-        main: green[700],
-        dark: green[800],
-        contrastText: '#fff'
-      },
-      danger: {
-        light: red[500],
-        main: red[700],
-        dark: red[800],
-        contrastText: '#fff'
-      },
-      error: {
-        light: red[500],
-        main: red[700],
-        dark: red[800],
-        contrastText: '#fff'
-      },
-      warning: {
-        light: yellow[500],
-        main: yellow[700],
-        dark: yellow[800],
-        contrastText: '#fff'
-      },
-      info: {
-        light: '#3d6bb3',
-        main: '#0d47a1',
-        dark: '#093170',
-        contrastText: '#fff' 
-      }
+    success: {
+      light: green[500],
+      main: green[700],
+      dark: green[800],
+      contrastText: '#fff'
+    },
+    error: {
+      light: red[500],
+      main: red[700],
+      dark: red[800],
+      contrastText: '#fff'
+    },
+    warning: {
+      light: yellow[500],
+      main: yellow[700],
+      dark: yellow[800],
+      contrastText: '#fff'
+    },
+    info: {
+      light: '#3d6bb3',
+      main: '#0d47a1',
+      dark: '#093170',
+      contrastText: '#fff' 
+    }
     },
     transitions: {
       easing: {
@@ -69,7 +58,7 @@ export const theme = createTheme({
       fontFamily: [
         '-apple-system',
         'BlinkMacSystemFont',
-        'Roboto',
+        'roboto',
         '"Helvetica Neue"',
         'Arial',
         'sans-serif',
@@ -79,19 +68,20 @@ export const theme = createTheme({
       ].join(','),
       h1: {
         fontFamily: [
-          '"Proxima Nova Extrabold"',
+          'proxima-nova',
           'sans-serif'
         ].join(','),
         fontSize: '4rem',
         '@media (max-width:600px)': {
-          fontSize: '2.5rem'
+          fontSize: '2.75rem'
         },
         fontWeight: 800,
-        letterSpacing: '1px'
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
       },
       h2: {
         fontFamily: [
-          '"Roboto Light"',
+          'roboto',
           '"Helvetica Neue Light"',
           '"Arial Light"',
           'sans-serif'
@@ -105,8 +95,11 @@ export const theme = createTheme({
       },
       h3: {
         fontFamily: [
-          'Roboto',
-          '"Helvetica Neue"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'roboto',
+          'Helvetica',
+          'Helvetica Neue',
           'Arial',
           'sans-serif'
         ].join(','),
@@ -119,7 +112,9 @@ export const theme = createTheme({
       },
       h4: {
         fontFamily: [
-          'Roboto',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
@@ -129,7 +124,9 @@ export const theme = createTheme({
       },
       h5: {
         fontFamily: [
-          'Roboto',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
@@ -139,7 +136,7 @@ export const theme = createTheme({
       },
       h6: {
         fontFamily: [
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif'
@@ -153,7 +150,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -168,7 +165,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -183,7 +180,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -198,7 +195,7 @@ export const theme = createTheme({
         fontFamily: [
           '-apple-system',
           'BlinkMacSystemFont',
-          'Roboto',
+          'roboto',
           '"Helvetica Neue"',
           'Arial',
           'sans-serif',
@@ -211,4 +208,4 @@ export const theme = createTheme({
       },
     }
   },
-});
+);
