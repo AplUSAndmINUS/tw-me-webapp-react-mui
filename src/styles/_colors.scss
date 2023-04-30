@@ -1,2 +1,29 @@
-// Color variables
-$black: '#000';
+// Color variables universal
+$black: #000;
+$white: #fff;
+$contrast-primary: #fff;
+$contrast-secondary: #ddd;
+
+// light mode colors
+$blue-primary-light: #445f7E;
+$blue-secondary-light: #748ba5;
+$success-light: #2e7d32;
+$error-light: #d32f2f;
+$warning-light: #f9a825;
+$info-light: #3d6bb3;
+
+// dark mode colors
+$blue-primary-dark: #748ba5;
+$blue-secondary-dark: #698084;
+$success-dark: #4caf50;
+$error-dark: #f44336;
+$warning-dark: #ffeb3b;
+$info-dark: #4f7ecb;
+
+// backgrounds
+$background-dark: linear-gradient(#535353 0%, #383838 64.82%, #5c5c5c 100%);
+$background-light: linear-gradient(#fff 0%, #f5f5f5 68.35%, rgba(255, 252, 252, 0.22) 100%);
+
+// drop-shadows
+$drop-shadow-light: 0px 3px 6px rgba(0,0,0,0.5);
+$drop-shadow-dark: 0px 3px 6px rgba(0,0,0,0.15);

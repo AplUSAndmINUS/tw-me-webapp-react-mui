@@ -6,39 +6,39 @@ import { green, red, yellow } from '@mui/material/colors';
 export const theme = createTheme({
   palette: {
     primary: {
-      light: '#3d6bb3',
+      light: '#445f75',
       main: '#0d47a1',
-      dark: '#093170',
+      dark: '#a4c3e6',
       contrastText: '#fff'
     },
     secondary: {
-      light: '#ff7961',
+      light: '#748ba5',
       main: '#00b0ff',
-      dark: '#ba000d',
+      dark: '#698084',
       contrastText: '#ddd'
     },
     success: {
-      light: green[500],
+      light: green[800],
       main: green[700],
-      dark: green[800],
+      dark: green[500],
       contrastText: '#fff'
     },
     error: {
-      light: red[500],
+      light: red[800],
       main: red[700],
-      dark: red[800],
+      dark: red[500],
       contrastText: '#fff'
     },
     warning: {
-      light: yellow[500],
+      light: yellow[800],
       main: yellow[700],
-      dark: yellow[800],
+      dark: yellow[500],
       contrastText: '#fff'
     },
     info: {
       light: '#3d6bb3',
       main: '#0d47a1',
-      dark: '#093170',
+      dark: '#4f7ecb',
       contrastText: '#fff' 
     }
     },

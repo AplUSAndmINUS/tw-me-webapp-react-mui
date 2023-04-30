@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/bxm1lzo.css");
 
+// font families
 $font-family: -apple-system, BlinkMacSystemFont, roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 $font-family-h1: proxima-nova, sans-serif;
 $font-fmaily_h2: roboto, "Helvetica Neue Light", "Arial Light", sans-serif;
@@ -10,6 +11,7 @@ $font-family-h6: 'roboto, "Helvetica Neue", Arial, sans-serif';
 $font-family-p: $font-family;
 $font-family-mono: roboto-mono, sans-serif;
 
+// font-sizes
 $font-size-one-quarter: 0.25rem;
 $font-size-half: 0.5rem;
 $font-size-three-fifth: 0.6rem;
@@ -19,13 +21,16 @@ $font-size1_5: 1.5rem;
 $font-size2: 2rem;
 $font-size4: 4rem;
 
+// font weights
 $font-weight-normal: normal;
 $font-weight-light: 200;
 $font-weight-bold: 600;
 $font-weight-heavy: 800;
 
+// letter spacing
 $letter-spacing: 0.1px;
 $letter-spacing-high: 2px;
 
+// text-transform
 $text-capitalize: capitalize;
 $text-uppercase: uppercase;
