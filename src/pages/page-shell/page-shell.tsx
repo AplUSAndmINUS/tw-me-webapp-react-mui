@@ -1,8 +1,19 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
+import { DarkMode } from '@mui/icons-material';
 
-import './styled';
-
-export const PageShell = () => <Typography variant="h1">PageShell page</Typography>;
+export const PageShell = () => {
+  return (
+    <>
+      <IconButton 
+        color="secondary" 
+        disableRipple
+        disableFocusRipple>
+        <DarkMode />
+      </IconButton>
+      <Typography variant="h1">PageShell page</Typography>
+    </>
+  )
+};
 
 export default PageShell;
