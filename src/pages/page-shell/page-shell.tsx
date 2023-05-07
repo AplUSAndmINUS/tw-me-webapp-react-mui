@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IconButton, Typography } from '@mui/material';
 import { DarkMode, LightMode } from '@mui/icons-material';
 
-import { toggleTheme } from '../../store/reducers/theme-slice';
+// import { toggleTheme } from '../../store/reducers/theme-slice';
 
 export const PageShell = () => {
   const darkMode = useSelector((state: any) => state.theme.darkMode);
