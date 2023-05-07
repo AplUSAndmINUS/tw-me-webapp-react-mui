@@ -232,6 +232,22 @@ export const darkTheme = createTheme({
   }
 });
 
+const initialState = {
+  theme: lightTheme
+};
+
+export function themeReducer(state = initialState, action: any) {
+  switch (action.type) {
+    case TOGGLE_THEME:
+      return {
+        ...state,
+        theme: state.theme === lightTheme ? darkTheme : lightTheme
+      };
+    default:
+      return state;
+  }
+}
+
 /* OLD method: Theme Slicer *****
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -256,4 +272,4 @@ export const themeSlice = createSlice({
 export const { toggleTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;
-**** END Theme Slicer -TW 05/06/2023
+**** END Theme Slicer -TW 05/06/2023 */
