@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { Provider, useSelector } from 'react-redux';
@@ -22,12 +22,13 @@ import Portfolio from './pages/portfolio/portfolio';
 import Writing from './pages/writing/writing';
 import './styles/_app.scss';
 
-function Root() {
+const Root = () => {
   const theme = useSelector((state: any) => state.theme);
-
+  console.log(theme);
+  
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<PageShell />}>
             <Route index element={<Home />} />
@@ -44,17 +45,18 @@ function Root() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </ThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ThemeProvider>
   )
-}
+};
 
-ReactDOM.render(
+const container: any = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <Root />
     </Provider>
-  </React.StrictMode>,
-
-  document.getElementById('root')
+  </React.StrictMode>
 );
