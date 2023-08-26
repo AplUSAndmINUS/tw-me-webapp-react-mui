@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-// import { useSelector, useDispatch } from 'react-redux';
+import { LinearProgress } from '@mui/material';
+import { Theme } from '@mui/material';
 
 /* Variables */
 import { darkTheme, lightTheme } from './store/constants/constants';
-// import { themeSlice } from './store/reducers/theme-slice';
 
 /* Pages */
 import About from './pages/about/about';
@@ -21,44 +22,54 @@ import PageShell from './pages/page-shell/page-shell';
 import Portfolio from './pages/portfolio/portfolio';
 import Writing from './pages/writing/writing';
 
-const Root = () => {
-  // const isDarkMode = useSelector((state: any) => state.toggleTheme.isDarkMode);
-  const [theme, setTheme] = React.useState(lightTheme);
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
-  // const dispatch = useDispatch();
+interface AppProps {
+  theme: Theme;
+}
 
-  // set the logic, but toggle doesn't work; for now, setting as lightMode
-  const handleToggle = () => {
-    setTheme(theme === darkTheme ? lightTheme : darkTheme);
-    setIsDarkMode(!isDarkMode);
-  };
-    
+export const App = ({theme}: AppProps) => {
+  const dispatch = useDispatch();
+  const [isThemeReady, setIsThemeReady] = React.useState(false);
+
+  React.useEffect(() => {
+    if (theme) {
+      setIsThemeReady(true);
+    }
+  }, [theme]);
+
+  console.log('Redux:', theme);
+
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<PageShell 
-              handleToggle={handleToggle}
-              isDarkMode={isDarkMode} />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="/content" element={<ContentShell />}>
-              <Route path="blog" element={<Blog />} />
-              <Route path="events" element={<Events />} />
-              <Route path="github" element={<GitHub />} />
-              <Route path="music" element={<Music />} />
-              <Route path="portfolio" element={<Portfolio />} />
-              <Route path="writing" element={<Writing />} />
+    !isThemeReady ? <LinearProgress />
+    : (
+      <ThemeProvider theme={lightTheme || theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<PageShell />}>
+            {/* <Route path="/" element={<PageShell 
+                handleToggle={handleToggle}
+                isDarkMode={isDarkMode} />}> */}
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="/content" element={<ContentShell />}>
+                <Route path="blog" element={<Blog />} />
+                <Route path="events" element={<Events />} />
+                <Route path="github" element={<GitHub />} />
+                <Route path="music" element={<Music />} />
+                <Route path="portfolio" element={<Portfolio />} />
+                <Route path="writing" element={<Writing />} />
+              </Route>
+              <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+    )
   )
 };
 
-export const App = () => {
-  return <Root />
-};
+const mapStateToProps = (state: any) => ({
+  theme: state.theme
+});
+
+export default connect(mapStateToProps)(App);

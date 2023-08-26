@@ -7,7 +7,7 @@ import { store } from './store/store';
 
 /* Pages */
 import './styles/_app.scss';
-import { App } from './App';
+import App from './App';
 
 const container: any = document.getElementById('root');
 const root = createRoot(container);

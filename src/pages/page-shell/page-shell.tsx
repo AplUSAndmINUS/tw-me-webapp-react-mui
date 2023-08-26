@@ -3,8 +3,8 @@ import { DarkMode, LightMode } from '@mui/icons-material';
 import ContentShell from './content-shell/content-shell';
 
 export interface PageShellProps {
-  handleToggle: () => void;
-  isDarkMode: boolean;
+  handleToggle?: () => void;
+  isDarkMode?: boolean;
 }
 
 export const PageShell = (props: PageShellProps) => {
