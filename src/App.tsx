@@ -1,7 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import { darkTheme, lightTheme } from './store/reducers/toggle-theme';
+// import { useSelector, useDispatch } from 'react-redux';
+
+/* Variables */
+import { darkTheme, lightTheme } from './store/constants/constants';
+// import { themeSlice } from './store/reducers/theme-slice';
 
 /* Pages */
 import About from './pages/about/about';
@@ -18,10 +22,14 @@ import Portfolio from './pages/portfolio/portfolio';
 import Writing from './pages/writing/writing';
 
 const Root = () => {
-  const [isDarkMode, setIsDarkMode] = React.useState(true);
-  const theme = isDarkMode ? darkTheme : lightTheme;
+  // const isDarkMode = useSelector((state: any) => state.toggleTheme.isDarkMode);
+  const [theme, setTheme] = React.useState(lightTheme);
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  // const dispatch = useDispatch();
 
+  // set the logic, but toggle doesn't work; for now, setting as lightMode
   const handleToggle = () => {
+    setTheme(theme === darkTheme ? lightTheme : darkTheme);
     setIsDarkMode(!isDarkMode);
   };
     
@@ -29,7 +37,9 @@ const Root = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PageShell />}>
+          <Route path="/" element={<PageShell 
+              handleToggle={handleToggle}
+              isDarkMode={isDarkMode} />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />

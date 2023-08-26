@@ -1,13 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { IconButton, Typography } from '@mui/material';
 import { DarkMode, LightMode } from '@mui/icons-material';
 
-// import { toggleTheme } from '../../store/reducers/theme-slice';
-import { toggleTheme } from '../../store/actions/actions';
+export interface PageShellProps {
+  handleToggle: () => void;
+  isDarkMode: boolean;
+}
 
-export const PageShell = () => {
-  const darkMode = useSelector((state: any) => state.theme.darkMode);
-  const dispatch = useDispatch();
+export const PageShell = (props: PageShellProps) => {
 
   return (
     <>
@@ -15,8 +14,8 @@ export const PageShell = () => {
         color="secondary" 
         disableRipple
         disableFocusRipple
-        onClick={() => dispatch(toggleTheme())}>
-        {darkMode ? <DarkMode /> : <LightMode />}
+        onClick={() => props.handleToggle}>
+        {props.isDarkMode ? <DarkMode /> : <LightMode />}
       </IconButton>
       <Typography variant="h1">PageShell page</Typography>
     </>
