@@ -5,27 +5,21 @@ export const lightTheme = createTheme({
   palette: {
     primary: {
       main: '#445f75',
-      contrastText: '#000'
     },
     secondary: {
       main: '#ddd',
-      contrastText: '#000'
     },
     success: {
       main: green[800],
-      contrastText: '#000'
     },
     error: {
       main: red[800],
-      contrastText: '#fff'
     },
     warning: {
       main: yellow[800],
-      contrastText: '#fff'
     },
     info: {
       main: '#3d6bb3',
-      contrastText: '#fff'
     },
     background: {
       paper: 'linear-gradient(#fff 0%, #f5f5f5 68.35%, rgba(255, 252, 252, 0.22) 100%)',
@@ -194,31 +188,24 @@ export const darkTheme = createTheme({
   palette: {
     primary: {
       main: '#a4c3e6',
-      contrastText: '#fff'
     },
     secondary: {
       main: '#333',
-      contrastText: '#dedede'
     },
     success: {
       main: green[500],
-      contrastText: '#fff'
     },
     error: {
       main: red[700],
-      contrastText: '#fff'
     },
     warning: {
       main: yellow[500],
-      contrastText: '#fff'
     },
     info: {
       main: '#4f7ecb',
-      contrastText: '#fff'
     },
     background: {
       paper: 'linear-gradient(#535353 0%, #383838 64.82%, #5c5c5c 100%)',
-      default: '#fff'
     }
   },
   transitions: {

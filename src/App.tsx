@@ -11,7 +11,7 @@ import { darkTheme, lightTheme } from './store/constants/constants';
 import About from './pages/about/about';
 import Blog from './pages/blog/blog';
 import Contact from './pages/contact/contact';
-import ContentShell from './pages/content-shell/content-shell';
+import ContentShell from './pages/page-shell/content-shell/content-shell';
 import Events from './pages/events/events';
 import GitHub from './pages/github/github';
 import Home from './pages/home/home';
