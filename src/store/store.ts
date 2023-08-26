@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { themeSlice } from './reducers/theme-slice';
+import { themeReducer } from './reducers/theme-reducer';
 
 export const store = configureStore({
   reducer: {
-    toggleTheme: themeSlice.reducer
+    theme: themeReducer
   },
 });
 
