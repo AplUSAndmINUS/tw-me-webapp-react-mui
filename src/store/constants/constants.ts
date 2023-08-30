@@ -1,80 +1,7 @@
 import { green, red, yellow } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 
-// palette: {
-//   primary: {
-//     main: '#445f75',
-//   },
-//   secondary: {
-//     main: '#ddd',
-//   },
-//   success: {
-//     main: green[800],
-//   },
-//   error: {
-//     main: red[800],
-//   },
-//   warning: {
-//     main: yellow[800],
-//   },
-//   info: {
-//     main: '#3d6bb3',
-//   },
-//   background: {
-//     paper: 'linear-gradient(#fff 0%, #f5f5f5 68.35%, rgba(255, 252, 252, 0.22) 100%)',
-//     default: '#fff'
-//   }
-// },
-
-// palette: {
-//   primary: {
-//     main: '#a4c3e6',
-//   },
-//   secondary: {
-//     main: '#333',
-//   },
-//   success: {
-//     main: green[500],
-//   },
-//   error: {
-//     main: red[700],
-//   },
-//   warning: {
-//     main: yellow[500],
-//   },
-//   info: {
-//     main: '#4f7ecb',
-//   },
-//   background: {
-//     paper: 'linear-gradient(#535353 0%, #383838 64.82%, #5c5c5c 100%)',
-//   }
-// },
-
 export const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#445f75',
-    },
-    secondary: {
-      main: '#ddd',
-    },
-    success: {
-      main: green[800],
-    },
-    error: {
-      main: red[800],
-    },
-    warning: {
-      main: yellow[800],
-    },
-    info: {
-      main: '#3d6bb3',
-    },
-    background: {
-      paper: 'linear-gradient(#fff 0%, #f5f5f5 68.35%, rgba(255, 252, 252, 0.22) 100%)',
-      default: '#fff'
-    }
-  },
   transitions: {
     easing: {
       // This is the most common easing curve.
@@ -231,4 +158,59 @@ export const theme = createTheme({
       fontWeight: 'normal'
     },
   }
+});
+
+export const lightTheme = createTheme({
+  ...theme,
+  palette: {
+    primary: {
+      main: '#445f75',
+    },
+    secondary: {
+      main: '#ddd',
+    },
+    success: {
+      main: green[800],
+    },
+    error: {
+      main: red[800],
+    },
+    warning: {
+      main: yellow[800],
+    },
+    info: {
+      main: '#3d6bb3',
+    },
+    background: {
+      paper: 'linear-gradient(#fff 0%, #f5f5f5 68.35%, rgba(255, 252, 252, 0.22) 100%)',
+      default: '#fff'
+    }
+  },
+})
+
+export const darkTheme = createTheme({
+  ...theme,
+  palette: {
+    primary: {
+      main: '#a4c3e6',
+    },
+    secondary: {
+      main: '#333',
+    },
+    success: {
+      main: green[500],
+    },
+    error: {
+      main: red[700],
+    },
+    warning: {
+      main: yellow[500],
+    },
+    info: {
+      main: '#4f7ecb',
+    },
+    background: {
+      paper: 'linear-gradient(#535353 0%, #383838 64.82%, #5c5c5c 100%)',
+    }
+  },
 });

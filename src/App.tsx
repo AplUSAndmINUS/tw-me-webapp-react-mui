@@ -1,25 +1,39 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRoutes } from 'react-router-dom';
 import { LinearProgress } from '@mui/material';
-import { ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 /* Variables */
 import { routes } from './routes/routes';
-import { theme } from './store/constants/constants'
+import { lightTheme } from './store/constants/constants';
+import { setInitialTheme } from './store/reducers/theme-reducer';
 
 function App() {
+  const [currentTheme, setCurrentTheme] = React.useState(createTheme({}));
+  const isThemeSet = useSelector((state: any) => state.theme.isThemeSet);
   const dispatch = useDispatch();
   const routing = useRoutes(routes);
 
+  React.useEffect(() => {
+    const setInitialTheming = async () => {
+      setCurrentTheme(lightTheme);
+      dispatch(setInitialTheme());
+    };
+
+    if (!isThemeSet) {
+      setInitialTheming();
+    }
+  }, [dispatch, isThemeSet]);
+
   return (
-    !theme ? (
+    !isThemeSet ? (
       <>
         <LinearProgress />
       </>
     ) : 
     (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={currentTheme}>
         {routing}
       </ThemeProvider>
     )

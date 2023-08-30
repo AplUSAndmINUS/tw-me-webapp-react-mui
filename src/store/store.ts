@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { setIsHomePage } from './reducers/home-page-reducer';
+import homePageReducer from './reducers/home-page-reducer';
+import themeReducer from './reducers/theme-reducer';
 
 export const store = configureStore({
   reducer: {
-    app: setIsHomePage
+    home: homePageReducer,
+    theme: themeReducer
   }
 });
 

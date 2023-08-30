@@ -15,3 +15,5 @@ const homePageSlice = createSlice({
 });
 
 export const { setIsHomePage } = homePageSlice.actions;
+
+export default homePageSlice.reducer;
