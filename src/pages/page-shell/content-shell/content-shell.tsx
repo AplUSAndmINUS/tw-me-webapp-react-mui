@@ -3,8 +3,12 @@ import { Grid, Typography } from '@mui/material';
 
 import './styled';
 
-export const ContentShell = () => {
-  const [isHomePage, setIsHomePage] = React.useState(true);
+interface ContentShellProps {
+  isHomePage?: boolean;
+}
+
+export const ContentShell = ({isHomePage = true}: ContentShellProps) => {
+
   return (
     <Grid container padding={4} spacing={3}>
       <Grid item xs={12} md={isHomePage ? 6 : 4} alignItems="center" justifyContent="center">
@@ -16,7 +20,5 @@ export const ContentShell = () => {
     </Grid>
   )
 }
-
-// export const ContentShell = () => <Typography variant="h1">Content Shell page</Typography>;
 
 export default ContentShell;

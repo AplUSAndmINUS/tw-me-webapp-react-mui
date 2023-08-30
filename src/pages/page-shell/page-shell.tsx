@@ -1,5 +1,7 @@
 import { IconButton, Typography } from '@mui/material';
 import { DarkMode, LightMode } from '@mui/icons-material';
+import { useDispatch, useSelector } from 'react-redux';
+
 import ContentShell from './content-shell/content-shell';
 
 export interface PageShellProps {
@@ -8,6 +10,8 @@ export interface PageShellProps {
 }
 
 export const PageShell = (props: PageShellProps) => {
+  const isHomePage = useSelector((state: any) => state.isHomePage);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -19,7 +23,7 @@ export const PageShell = (props: PageShellProps) => {
         {props.isDarkMode ? <DarkMode /> : <LightMode />}
       </IconButton>
       <Typography variant="h1">PageShell page</Typography>
-      <ContentShell />
+      <ContentShell isHomePage={isHomePage} />
     </>
   )
 };
